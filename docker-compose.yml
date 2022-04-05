@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    command: python /app/subs.py
+    restart: always
+    volumes:
+      - .:/data
+    env_file:
+      - ./.env
